@@ -9,40 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26024ebc-11e4-4ab5-b7a7-a605ec37e559" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/flashcardsV4_war.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/flashcardsV4_war_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/flashcardsv4/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/flashcardsv4/controllers/CreateCardController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/flashcardsv4/controllers/CreateChapterController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/flashcardsv4/controllers/DeleteCardController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/flashcardsv4/controllers/DeleteChapterController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/flashcardsv4/controllers/EditorController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/flashcardsv4/controllers/MainPageController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/flashcardsv4/controllers/TrainingController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/flashcardsv4/controllers/UpdateCardController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/flashcardsv4/exceptions/InputDataException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/flashcardsv4/exceptions/RepositoryException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/flashcardsv4/models/Card.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/flashcardsv4/models/Chapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/flashcardsv4/repositories/CardRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/flashcardsv4/repositories/CardRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/flashcardsv4/repositories/ChapterRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/flashcardsv4/repositories/ChapterRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/flashcardsv4/service/CardService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/flashcardsv4/service/CardServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/flashcardsv4/service/ChapterService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/flashcardsv4/service/ChapterServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/db.operations/V2_filed_table.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/migration/V1__initial_schema.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="26024ebc-11e4-4ab5-b7a7-a605ec37e559" name="Changes" comment="with some controllers">
+      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/flashcardsv4/editionPage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/flashcardsv4/mainPage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/flashcardsv4/HelloServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/flashcardsv4/HelloServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +24,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -109,6 +81,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -256,8 +229,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1685791921584</updated>
-      <workItem from="1685791923577" duration="3422000" />
+      <workItem from="1685791923577" duration="6582000" />
     </task>
+    <task id="LOCAL-00001" summary="with some controllers">
+      <created>1685795590392</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1685795590392</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -285,5 +266,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="with some controllers" />
+    <option name="LAST_COMMIT_MESSAGE" value="with some controllers" />
   </component>
 </project>
