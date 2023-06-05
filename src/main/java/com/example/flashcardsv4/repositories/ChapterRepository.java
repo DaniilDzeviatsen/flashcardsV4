@@ -12,4 +12,6 @@ public interface ChapterRepository {
     void createNewChapter(String name);
 
     void deleteChapter(long chapterId);
+
+    boolean ifChapterExists(long chapterId);
 }

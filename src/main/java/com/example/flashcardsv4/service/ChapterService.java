@@ -11,4 +11,5 @@ public interface ChapterService {
     List<Chapter> getAllChapters();
 
     void createNewChapter(String name);
+
 }

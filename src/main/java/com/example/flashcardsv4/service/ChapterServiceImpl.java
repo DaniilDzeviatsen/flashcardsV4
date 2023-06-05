@@ -15,7 +15,9 @@ public class ChapterServiceImpl implements ChapterService {
     }
 
     public void removeChapter(long chapterId) {
-        chapterRepository.deleteChapter(chapterId);
+        if (chapterRepository.ifChapterExists(chapterId)) {
+            chapterRepository.deleteChapter(chapterId);
+        }else throw new InputDataException();
     }
 
     public void createNewChapter(String name) {

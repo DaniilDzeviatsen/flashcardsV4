@@ -40,7 +40,7 @@ public class CardRepositoryImpl implements CardRepository {
     }
 
     @Override
-    public void addCard(long chapterId, String question, String answer, boolean isRemembered) {
+    public void addCard(long chapterId, String question, String answer) {
         String sql = """
                 INSERT INTO card (chapter_id, question, answer, is_remembered)
                 VALUES (?,?,?,?);
@@ -53,7 +53,7 @@ public class CardRepositoryImpl implements CardRepository {
             statement.setLong(1, chapterId);
             statement.setString(2, question);
             statement.setString(3, answer);
-            statement.setBoolean(4, isRemembered);
+            statement.setBoolean(4, false);
             statement.executeUpdate();
         } catch (SQLException e) {
             throw new RepositoryException(e);
@@ -142,6 +142,24 @@ public class CardRepositoryImpl implements CardRepository {
             }
             return cardList;
         } catch (SQLException e) {
+            throw new RepositoryException(e);
+        }
+    }
+    @Override
+    public boolean ifCardExists(long cardId) {
+        String sql= """
+                SELECT TRUE
+                FROM card
+                WHERE card.id = ?;
+                """;
+        try(
+                Connection connection=db.getConnection();
+                PreparedStatement statement=connection.prepareStatement(sql);
+        ){
+            statement.setLong(1, cardId);
+            ResultSet resultSet=statement.executeQuery();
+            return resultSet.next();
+        }catch (SQLException e){
             throw new RepositoryException(e);
         }
     }

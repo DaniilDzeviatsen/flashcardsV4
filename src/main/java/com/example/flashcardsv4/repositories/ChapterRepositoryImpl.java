@@ -81,5 +81,24 @@ public class ChapterRepositoryImpl implements ChapterRepository {
             throw new RepositoryException(e);
         }
     }
+
+    @Override
+    public boolean ifChapterExists(long chapterId) {
+        String sql= """
+                SELECT TRUE
+                FROM chapter
+                WHERE chapter.id = ?;
+                """;
+        try(
+                Connection connection=db.getConnection();
+                PreparedStatement statement=connection.prepareStatement(sql);
+                ){
+            statement.setLong(1, chapterId);
+            ResultSet resultSet=statement.executeQuery();
+            return resultSet.next();
+        }catch (SQLException e){
+            throw new RepositoryException(e);
+        }
+    }
 }
 

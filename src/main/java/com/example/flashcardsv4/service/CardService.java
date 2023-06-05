@@ -9,11 +9,11 @@ public interface CardService {
 
     void deleteCard(long cardId);
 
-    void addCard(long chapterId, String question, String answer, boolean isRemembered);
+    void addCard(long chapterId, String question, String answer);
 
-    void updateMemorizing(long cardId, long chapterId);
+    void updateMemorizingToTrueForTraining(long cardId);
 
-    List<Card> getOneCardData(long chapterId, long offset);
+    List<Card> getOneCardDataForTraining(long chapterId, long offset);
 
     List<Card> showAllCards(long chapterId);
 
