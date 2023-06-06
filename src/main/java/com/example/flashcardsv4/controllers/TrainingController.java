@@ -34,6 +34,6 @@ public class TrainingController extends HttpServlet {
         response.setContentType("text/plain");
         response.setCharacterEncoding("utf-8");
         response.setStatus(200);
-        response.getWriter().println(this.cardService.getOneCardData(chapterId, offset));
+        response.getWriter().println(cardService.getOneCardDataForTraining(chapterId, offset));
     }
 }

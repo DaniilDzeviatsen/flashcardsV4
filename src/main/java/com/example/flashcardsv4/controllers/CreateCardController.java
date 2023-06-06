@@ -11,7 +11,7 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
-@WebServlet(urlPatterns = "/createCard")
+@WebServlet(urlPatterns = "/create-card")
 public class CreateCardController extends HttpServlet {
     private CardService cardService;
 
