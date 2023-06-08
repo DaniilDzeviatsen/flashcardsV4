@@ -25,6 +25,6 @@ private ChapterService chapterService;
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         long chapterId=Long.parseLong(req.getParameter("chapterId"));
         chapterService.removeChapter(chapterId);
-        resp.sendRedirect(req.getContextPath()+EditorController.PATH);
+        resp.sendRedirect(req.getContextPath()+MainPageController.PATH);
     }
 }

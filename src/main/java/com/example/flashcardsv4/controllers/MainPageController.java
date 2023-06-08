@@ -13,11 +13,13 @@ import java.io.IOException;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@WebServlet(urlPatterns = "/mainPage")
+import static com.example.flashcardsv4.controllers.MainPageController.PATH;
+
+@WebServlet(urlPatterns = PATH)
 public class MainPageController extends HttpServlet {
     private ChapterService chapterService;
 
-
+    public static final String PATH = "/mainPage";
     public void init() {
         ServletContext context = getServletContext();
         chapterService = (ChapterService)context.getAttribute("chapterService");
