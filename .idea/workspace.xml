@@ -10,9 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="26024ebc-11e4-4ab5-b7a7-a605ec37e559" name="Changes" comment="with some posts">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/flashcardsv4/controllers/DeleteChapterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/flashcardsv4/controllers/DeleteChapterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/flashcardsv4/controllers/MainPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/flashcardsv4/controllers/MainPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/flashcardsv4/controllers/CreateCardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/flashcardsv4/controllers/CreateCardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/flashcardsv4/controllers/DeleteCardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/flashcardsv4/controllers/DeleteCardController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -248,7 +247,7 @@
       <workItem from="1685791923577" duration="14206000" />
       <workItem from="1686035804169" duration="34000" />
       <workItem from="1686207852149" duration="1606000" />
-      <workItem from="1686209789158" duration="738000" />
+      <workItem from="1686209789158" duration="1382000" />
     </task>
     <task id="LOCAL-00001" summary="with some controllers">
       <created>1685795590392</created>
@@ -285,7 +284,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686035347016</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="with some posts">
+      <created>1686210557383</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1686210557383</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
