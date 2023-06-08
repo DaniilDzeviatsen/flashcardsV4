@@ -13,12 +13,16 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
+import static com.example.flashcardsv4.controllers.TrainingController.PATH;
 
-@WebServlet(urlPatterns = "/training")
+
+@WebServlet(urlPatterns = PATH)
 public class TrainingController extends HttpServlet {
 
     private CardService cardService;
     private ChapterService chapterService;
+
+    public static final String PATH="training";
 
     @Override
     public void init() {

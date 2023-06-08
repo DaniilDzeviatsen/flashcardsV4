@@ -1,7 +1,6 @@
 package com.example.flashcardsv4.repositories;
 
 
-
 import com.example.flashcardsv4.exceptions.RepositoryException;
 import com.example.flashcardsv4.models.Card;
 
@@ -84,7 +83,8 @@ public class CardRepositoryImpl implements CardRepository {
                 SELECT card.id AS id,
                        card.question AS question,
                        card.answer AS answer,
-                       card.is_remembered AS remembered
+                       card.is_remembered AS remembered,
+                       card.chapter_id AS chapterId
                 FROM card
                 WHERE card.chapter_id = ?
                                  """;
@@ -101,7 +101,8 @@ public class CardRepositoryImpl implements CardRepository {
                         resultSet.getString("question"),
                         resultSet.getString("answer"),
                         resultSet.getBoolean("remembered"),
-                        resultSet.getLong("id")
+                        resultSet.getLong("id"),
+                        resultSet.getLong("chapterId")
                 ));
             }
             return result;
@@ -111,17 +112,54 @@ public class CardRepositoryImpl implements CardRepository {
     }
 
     @Override
-    public List<Card> getOneCardData(long chapterId, long offset) {
+    public Card getCardById(long cardId) {
         String sql = """
                 SELECT card.id AS id,
                        card.question AS question,
                        card.answer AS answer,
-                       card.is_remembered AS remembered
+                       card.is_remembered AS remembered,
+                       card.chapter_id AS chapter_id
+                FROM card
+                WHERE card.id = ?
+                                 """;
+        try (
+                Connection connection = db.getConnection();
+                PreparedStatement statement = connection.prepareStatement(sql)
+
+        ) {
+            statement.setLong(1, cardId);
+
+            ResultSet resultSet = statement.executeQuery();
+            Card card = new Card(
+
+
+                    resultSet.getString("question"),
+                    resultSet.getString("answer"),
+                    resultSet.getBoolean("remembered"),
+                    resultSet.getLong("id"),
+                    resultSet.getLong("chapterId")
+            );
+
+            return card;
+        } catch (SQLException e) {
+            throw new RepositoryException(e);
+        }
+    }
+
+    @Override
+    public Card getOneCardData(long chapterId, long nextCardId) {
+        String sql = """
+                SELECT card.id AS id,
+                       card.question AS question,
+                       card.answer AS answer,
+                       card.is_remembered AS remembered,
+                       card.chapter_id AS chapterId
                 FROM card
                 WHERE card.chapter_id = ?
                   AND NOT card.is_remembered
+                  AND card.id>?
                 ORDER BY card.id
-                LIMIT 1 OFFSET ?;
+                LIMIT 1
                 """;
         try (
                 Connection connection = db.getConnection();
@@ -129,37 +167,37 @@ public class CardRepositoryImpl implements CardRepository {
 
         ) {
             statement.setLong(1, chapterId);
-            statement.setLong(2, offset);
+            statement.setLong(2, nextCardId);
             ResultSet resultSet = statement.executeQuery();
-            List<Card> cardList = new ArrayList<>();
-            while (resultSet.next()) {
-                cardList.add(new Card(
+            Card card =  new Card(
                         resultSet.getString("question"),
                         resultSet.getString("answer"),
                         resultSet.getBoolean("remembered"),
-                        resultSet.getLong("id")
-                ));
-            }
-            return cardList;
+                        resultSet.getLong("id"),
+                    resultSet.getLong("chapterId")
+                );
+
+            return card;
         } catch (SQLException e) {
             throw new RepositoryException(e);
         }
     }
+
     @Override
     public boolean ifCardExists(long cardId) {
-        String sql= """
+        String sql = """
                 SELECT TRUE
                 FROM card
                 WHERE card.id = ?;
                 """;
-        try(
-                Connection connection=db.getConnection();
-                PreparedStatement statement=connection.prepareStatement(sql);
-        ){
+        try (
+                Connection connection = db.getConnection();
+                PreparedStatement statement = connection.prepareStatement(sql);
+        ) {
             statement.setLong(1, cardId);
-            ResultSet resultSet=statement.executeQuery();
+            ResultSet resultSet = statement.executeQuery();
             return resultSet.next();
-        }catch (SQLException e){
+        } catch (SQLException e) {
             throw new RepositoryException(e);
         }
     }

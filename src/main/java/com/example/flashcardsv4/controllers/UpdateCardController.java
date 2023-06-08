@@ -22,6 +22,6 @@ public class UpdateCardController extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         long cardId=Long.parseLong(req.getParameter("cardId"));
         cardService.updateMemorizingToTrueForTraining(cardId);
-        resp.sendRedirect(req.getContextPath());
+        resp.sendRedirect(req.getContextPath()+TrainingGetNextCardController.PATH+"?cardId="+cardId);
     }
 }

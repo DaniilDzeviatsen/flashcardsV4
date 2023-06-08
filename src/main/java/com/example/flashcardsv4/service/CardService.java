@@ -7,14 +7,17 @@ import java.util.List;
 
 public interface CardService {
 
-    void deleteCard(long cardId);
+    long deleteCard(long cardId);
 
     void addCard(long chapterId, String question, String answer);
 
     void updateMemorizingToTrueForTraining(long cardId);
 
-    List<Card> getOneCardDataForTraining(long chapterId, long offset);
+    Card getOneCardDataForTraining(long chapterId, long offset);
 
     List<Card> showAllCards(long chapterId);
+
+    public Card getNextCard(long cardId);
+
 
 }

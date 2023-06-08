@@ -16,10 +16,11 @@ public class CardServiceImpl implements CardService {
         this.cardRepository = cardRepository;
     }
 
-    public void deleteCard(long cardId) {
+    public long deleteCard(long cardId) {
         if (cardRepository.ifCardExists(cardId)) {
             cardRepository.deleteCard(cardId);
         } else throw new InputDataException();
+        return cardId;
     }
 
     public void addCard(long chapterId, String question, String answer) {
@@ -37,7 +38,7 @@ public class CardServiceImpl implements CardService {
         } else throw new InputDataException();
     }
 
-    public List<Card> getOneCardDataForTraining(long chapterId, long offset) {
+    public Card getOneCardDataForTraining(long chapterId, long offset) {
         if (chapterRepository.ifChapterExists(chapterId)) {
             return cardRepository.getOneCardData(chapterId, offset);
         } else throw new InputDataException();
@@ -45,5 +46,14 @@ public class CardServiceImpl implements CardService {
 
     public List<Card> showAllCards(long chapterId) {
         return cardRepository.showAllCards(chapterId);
+    }
+
+    @Override
+    public Card getNextCard(long cardId) {
+        Card card;
+        if (cardRepository.ifCardExists(cardId)) {
+            card = cardRepository.getCardById(cardId);
+        }else throw new InputDataException();
+        return cardRepository.getOneCardData(card.getChapterId(),cardId);
     }
 }

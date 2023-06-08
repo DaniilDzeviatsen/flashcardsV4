@@ -6,11 +6,14 @@ public class Card {
     private final boolean is_remembered;
     private final long id;
 
-    public Card(String question, String answer, boolean is_remembered, long id) {
+    private final long chapterId;
+
+    public Card(String question, String answer, boolean is_remembered, long id, long chapterId) {
         this.question = question;
         this.answer = answer;
         this.is_remembered = is_remembered;
         this.id = id;
+        this.chapterId = chapterId;
     }
 
     @Override
@@ -20,6 +23,7 @@ public class Card {
                 ", answer='" + answer + '\'' +
                 ", is_remembered=" + is_remembered +
                 ", id=" + id +
+                ", chapterId=" + chapterId +
                 '}';
     }
 
@@ -37,5 +41,9 @@ public class Card {
 
     public long getId() {
         return id;
+    }
+
+    public long getChapterId() {
+        return chapterId;
     }
 }

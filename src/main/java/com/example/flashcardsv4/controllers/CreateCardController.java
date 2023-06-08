@@ -27,6 +27,6 @@ public class CreateCardController extends HttpServlet {
         String question=req.getParameter("question");
         String answer=req.getParameter("answer");
         cardService.addCard(chapterId, question, answer);
-        resp.sendRedirect(req.getContextPath()+EditorController.PATH+"/?chapterId"+chapterId);
+        resp.sendRedirect(req.getContextPath()+EditorController.PATH+"?chapterId"+chapterId);
     }
 }

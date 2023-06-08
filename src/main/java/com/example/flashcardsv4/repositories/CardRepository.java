@@ -14,6 +14,8 @@ public interface CardRepository {
 
     List<Card> showAllCards(long chapterId);
 
-    List<Card> getOneCardData(long chapterId, long offset);
+    Card getCardById(long cardId);
+
+    Card getOneCardData(long chapterId, long offset);
     boolean ifCardExists(long cardId);
 }
