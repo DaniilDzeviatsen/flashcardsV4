@@ -13,7 +13,7 @@ public interface CardService {
 
     void updateMemorizingToTrueForTraining(long cardId);
 
-    Card getOneCardDataForTraining(long chapterId, long offset);
+    Card getOneNextCardDataForTraining(long chapterId, long nextCardId);
 
     List<Card> showAllCards(long chapterId);
 

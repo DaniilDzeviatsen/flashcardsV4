@@ -38,9 +38,9 @@ public class CardServiceImpl implements CardService {
         } else throw new InputDataException();
     }
 
-    public Card getOneCardDataForTraining(long chapterId, long offset) {
+    public Card getOneNextCardDataForTraining(long chapterId, long nextCardId) {
         if (chapterRepository.ifChapterExists(chapterId)) {
-            return cardRepository.getOneCardData(chapterId, offset);
+            return cardRepository.getOneCardData(chapterId, nextCardId);
         } else throw new InputDataException();
     }
 

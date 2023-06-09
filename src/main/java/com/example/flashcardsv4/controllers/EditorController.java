@@ -22,7 +22,7 @@ public class EditorController extends HttpServlet {
     public static final String PATH = "/editor";
 
     @Override
-    public void init() {
+    public void init() throws ServletException{
         ServletContext context = getServletContext();
         cardService = (CardService) context.getAttribute("cardService");
     }

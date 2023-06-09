@@ -20,7 +20,7 @@ public class MainPageController extends HttpServlet {
     private ChapterService chapterService;
 
     public static final String PATH = "/mainPage";
-    public void init() {
+    public void init() throws ServletException {
         ServletContext context = getServletContext();
         chapterService = (ChapterService)context.getAttribute("chapterService");
     }
