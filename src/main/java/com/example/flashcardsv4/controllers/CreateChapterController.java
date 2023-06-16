@@ -24,6 +24,6 @@ public class CreateChapterController extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String name=req.getParameter("name");
         chapterService.createNewChapter(name);
-        resp.sendRedirect(req.getContextPath()+"/mainPage");
+        resp.sendRedirect(req.getContextPath()+MainPageController.PATH);
     }
 }

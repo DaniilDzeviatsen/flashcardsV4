@@ -20,6 +20,9 @@
           <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:2.0.5" />
           <element id="library" level="project" name="Maven: ch.qos.logback:logback-classic:1.4.6" />
           <element id="library" level="project" name="Maven: ch.qos.logback:logback-core:1.4.6" />
+          <element id="library" level="project" name="Maven: jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:3.0.0" />
+          <element id="library" level="project" name="Maven: jakarta.el:jakarta.el-api:5.0.0" />
+          <element id="library" level="project" name="Maven: org.glassfish.web:jakarta.servlet.jsp.jstl:3.0.0" />
         </element>
       </element>
       <element id="directory" name="META-INF">
