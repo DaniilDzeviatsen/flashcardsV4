@@ -33,7 +33,7 @@ public class Application implements ServletContextListener {
 
         ChapterRepository chapterRepository = new ChapterRepositoryImpl(db);
         CardRepository cardRepository = new CardRepositoryImpl(db);
-        CardService cardService = new CardServiceImpl(cardRepository);
+        CardService cardService = new CardServiceImpl(cardRepository, chapterRepository);
         ChapterService chapterService = new ChapterServiceImpl(chapterRepository);
         ServletContext context = event.getServletContext();
         context.setAttribute("dataSource", db);

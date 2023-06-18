@@ -52,7 +52,7 @@
                     <h5>answer</h5>
                     <input type="text" name="answer" required>
                     <input type="hidden" id="chapterId" name="chapterId" value="${chapterId}">
-                    <button type="submit">add</button>
+                    <button type="submit" name="chapterId" value="${chapterId}">add</button>
                 </form>
             </ul>
         </c:if>

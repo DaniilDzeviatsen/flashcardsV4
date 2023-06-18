@@ -12,7 +12,8 @@ public class CardServiceImpl implements CardService {
     CardRepository cardRepository;
     ChapterRepository chapterRepository;
 
-    public CardServiceImpl(CardRepository cardRepository) {
+    public CardServiceImpl(CardRepository cardRepository, ChapterRepository chapterRepository) {
+        this.chapterRepository=chapterRepository;
         this.cardRepository = cardRepository;
     }
 
@@ -26,7 +27,7 @@ public class CardServiceImpl implements CardService {
     }
 
     public void addCard(long chapterId, String question, String answer) {
-        if (chapterRepository.ifChapterExists(chapterId)) {
+         if (chapterRepository.ifChapterExists(chapterId)) {
             if (!question.isEmpty() && !answer.isEmpty()) {
                 cardRepository.addCard(chapterId, question, answer);
             } else throw new InputDataException();

@@ -9,15 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26024ebc-11e4-4ab5-b7a7-a605ec37e559" name="Changes" comment="with some posts">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/cards.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/training.jsp" afterDir="false" />
+    <list default="true" id="26024ebc-11e4-4ab5-b7a7-a605ec37e559" name="Changes" comment="with some jsp">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/flashcardsv4/controllers/DeleteCardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/flashcardsv4/controllers/DeleteCardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/flashcardsv4/controllers/EditorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/flashcardsv4/controllers/EditorController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/flashcardsv4/repositories/CardRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/flashcardsv4/repositories/CardRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/flashcardsv4/controllers/CreateCardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/flashcardsv4/controllers/CreateCardController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/flashcardsv4/service/CardServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/flashcardsv4/service/CardServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/chapters.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/chapters.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/cards.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/cards.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -262,7 +258,7 @@
       <workItem from="1686740164707" duration="6647000" />
       <workItem from="1686920109922" duration="295000" />
       <workItem from="1686944777847" duration="8912000" />
-      <workItem from="1687077450527" duration="10118000" />
+      <workItem from="1687077450527" duration="15038000" />
     </task>
     <task id="LOCAL-00001" summary="with some controllers">
       <created>1685795590392</created>
@@ -327,7 +323,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686299840572</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="with some jsp">
+      <created>1687087686967</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1687087686967</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -362,7 +365,8 @@
     <MESSAGE value="with services after remarks" />
     <MESSAGE value="with some posts (without correct redirect)" />
     <MESSAGE value="with some posts" />
-    <option name="LAST_COMMIT_MESSAGE" value="with some posts" />
+    <MESSAGE value="with some jsp" />
+    <option name="LAST_COMMIT_MESSAGE" value="with some jsp" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -393,6 +397,15 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/flashcardsv4/service/CardServiceImpl.java</url>
+          <line>27</line>
+          <properties class="com.example.flashcardsv4.service.CardServiceImpl" method="addCard">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
