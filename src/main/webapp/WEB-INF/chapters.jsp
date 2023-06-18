@@ -11,7 +11,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Title</title>
+    <title>Chapters</title>
 </head>
 <body>
 <jsp:include page="/WEB-INF/header.jsp"/>
@@ -27,6 +27,7 @@
                 <c:forEach var="chapter" items="${chapters}">
                     <li>
                         <a href="<c:url value="/editor?chapterId=${chapter.chapterId}"/> ">
+                            <c:out value="${chapter.name}"/>
                         </a>
                             ${chapter.numOfLearnedCards}/${chapter.totalCardsNum}
                         <form action="<c:url value="/deleteChapter"/> "

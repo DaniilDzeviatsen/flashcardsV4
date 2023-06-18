@@ -10,16 +10,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="26024ebc-11e4-4ab5-b7a7-a605ec37e559" name="Changes" comment="with some posts">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/chapters.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/footer.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/flashcardsV4_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/flashcardsV4_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/cards.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/training.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/flashcardsv4/controllers/CreateChapterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/flashcardsv4/controllers/CreateChapterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/flashcardsv4/controllers/MainPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/flashcardsv4/controllers/MainPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/flashcardsv4/editionPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/cards.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/flashcardsv4/mainPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/mainPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/flashcardsv4/controllers/DeleteCardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/flashcardsv4/controllers/DeleteCardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/flashcardsv4/controllers/EditorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/flashcardsv4/controllers/EditorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/flashcardsv4/repositories/CardRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/flashcardsv4/repositories/CardRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/flashcardsv4/service/CardServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/flashcardsv4/service/CardServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/chapters.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/chapters.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -264,6 +262,7 @@
       <workItem from="1686740164707" duration="6647000" />
       <workItem from="1686920109922" duration="295000" />
       <workItem from="1686944777847" duration="8912000" />
+      <workItem from="1687077450527" duration="10118000" />
     </task>
     <task id="LOCAL-00001" summary="with some controllers">
       <created>1685795590392</created>
@@ -385,6 +384,15 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/flashcardsv4/repositories/CardRepositoryImpl.java</url>
+          <line>114</line>
+          <properties class="com.example.flashcardsv4.repositories.CardRepositoryImpl" method="getCardById">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

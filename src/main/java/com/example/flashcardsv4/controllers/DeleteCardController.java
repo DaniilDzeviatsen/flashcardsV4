@@ -21,7 +21,7 @@ public class DeleteCardController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         long cardId=Long.parseLong(req.getParameter("cardId"));
-        long deletedCardId=cardService.deleteCard(cardId);
-        resp.sendRedirect(req.getContextPath()+EditorController.PATH+"?deckId"+deletedCardId);
+        long deletedCardChapterId=cardService.deleteCard(cardId);
+        resp.sendRedirect(req.getContextPath()+EditorController.PATH+"?chapterId="+deletedCardChapterId);
     }
 }

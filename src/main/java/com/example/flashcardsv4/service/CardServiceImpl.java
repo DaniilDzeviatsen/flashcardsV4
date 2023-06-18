@@ -17,10 +17,12 @@ public class CardServiceImpl implements CardService {
     }
 
     public long deleteCard(long cardId) {
+        Card card;
         if (cardRepository.ifCardExists(cardId)) {
+            card = cardRepository.getCardById(cardId);
             cardRepository.deleteCard(cardId);
         } else throw new InputDataException();
-        return cardId;
+        return card.getChapterId();
     }
 
     public void addCard(long chapterId, String question, String answer) {
@@ -53,7 +55,7 @@ public class CardServiceImpl implements CardService {
         Card card;
         if (cardRepository.ifCardExists(cardId)) {
             card = cardRepository.getCardById(cardId);
-        }else throw new InputDataException();
-        return cardRepository.getOneCardData(card.getChapterId(),cardId);
+        } else throw new InputDataException();
+        return cardRepository.getOneCardData(card.getChapterId(), cardId);
     }
 }

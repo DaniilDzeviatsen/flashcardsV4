@@ -118,7 +118,7 @@ public class CardRepositoryImpl implements CardRepository {
                        card.question AS question,
                        card.answer AS answer,
                        card.is_remembered AS remembered,
-                       card.chapter_id AS chapter_id
+                       card.chapter_id AS chapterId
                 FROM card
                 WHERE card.id = ?
                                  """;
@@ -130,16 +130,17 @@ public class CardRepositoryImpl implements CardRepository {
             statement.setLong(1, cardId);
 
             ResultSet resultSet = statement.executeQuery();
-            Card card = new Card(
+            Card card = null;
+            while (resultSet.next()) {
+                card = new Card(
 
-
-                    resultSet.getString("question"),
-                    resultSet.getString("answer"),
-                    resultSet.getBoolean("remembered"),
-                    resultSet.getLong("id"),
-                    resultSet.getLong("chapterId")
-            );
-
+                        resultSet.getString("question"),
+                        resultSet.getString("answer"),
+                        resultSet.getBoolean("remembered"),
+                        resultSet.getLong("id"),
+                        resultSet.getLong("chapterId")
+                );
+            }
             return card;
         } catch (SQLException e) {
             throw new RepositoryException(e);
@@ -169,14 +170,16 @@ public class CardRepositoryImpl implements CardRepository {
             statement.setLong(1, chapterId);
             statement.setLong(2, nextCardId);
             ResultSet resultSet = statement.executeQuery();
-            Card card =  new Card(
+            Card card = null;
+            while (resultSet.next()) {
+                card = new Card(
                         resultSet.getString("question"),
                         resultSet.getString("answer"),
                         resultSet.getBoolean("remembered"),
                         resultSet.getLong("id"),
-                    resultSet.getLong("chapterId")
+                        resultSet.getLong("chapterId")
                 );
-
+            }
             return card;
         } catch (SQLException e) {
             throw new RepositoryException(e);

@@ -3,6 +3,7 @@ package com.example.flashcardsv4.controllers;
 import com.example.flashcardsv4.models.Card;
 import com.example.flashcardsv4.service.CardService;
 import com.example.flashcardsv4.service.ChapterService;
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletContext;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -31,7 +32,13 @@ public class EditorController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         long chapterId=Long.valueOf(request.getParameter("chapterId"));
         List<Card> cards=cardService.showAllCards(chapterId);
-        String responseBody=cards.isEmpty()?"No one card exists":cards.stream()
+
+        request.setAttribute("cards", cards);
+        request.setAttribute("chapterId", chapterId);
+
+        RequestDispatcher dispatcher=request.getRequestDispatcher("/WEB-INF/cards.jsp");
+        dispatcher.forward(request,response);
+        /*String responseBody=cards.isEmpty()?"No one card exists":cards.stream()
                 .map(card->"%3s %s %s %s".formatted(
                         card.getId(),
                         card.getQuestion(),
@@ -42,6 +49,6 @@ public class EditorController extends HttpServlet {
         response.setContentType("text/plain");
         response.setCharacterEncoding("utf-8");
         response.setStatus(HttpServletResponse.SC_OK);
-        response.getWriter().println(responseBody);
+        response.getWriter().println(responseBody);*/
     }
 }
