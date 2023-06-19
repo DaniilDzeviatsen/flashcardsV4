@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main page</title>
+</head>
+<body>
+<header>
+    <h1> Main page</h1>
+</header>
+<section>
+    <h2>Chapters</h2>
+    <ul>
+        <li>
+            <a href="/flashcardsV4/editor?chapterId=1">Английский цвета</a>
+            3/3
+        </li>
+        <li>
+            <a href="/flashcardsV4/editor?chapterId=2">Звуки животных </a>
+            3/3
+        </li>
+        <li>
+            <a href="/flashcardsV4/editor?chapterId=3">Английский числа</a>
+            2/3
+        </li>
+    </ul>
+</section>
+<section>
+    <h2>Добавить chapter</h2>
+    <form action="/flashcardsV4/create-chapter" method="post" enctype="application/x-www-form-urlencoded">
+        <label>
+            Название
+            <input type="text" name="name">
+        </label>
+        <button type="submit">Создать</button>
+    </form>
+    <form>
+        <h2>Удалить chapter</h2>
+        <form action="/flashcardsV4/delete-chapter" method="post" enctype="application/x-www-form-urlencoded">
+            <div>
+                <label>Выберите chapter</label>
+                <select id="id" name="chapterId">
+                    <option name="1">Английский цвета
+                    </option>
+                    <option name="2">Звуки животных
+                    </option>
+                    <option name="3">Английский числа
+                    </option>
+                </select>
+            </div>
+            <button type="submit">Удалить</button>
+        </form>
+</section>
+<footer>(c) 2023</footer>
+</body>
+</html>
